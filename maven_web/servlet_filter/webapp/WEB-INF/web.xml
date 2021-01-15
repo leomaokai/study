@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <welcome-file-list>
+        <welcome-file>/login</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>filtertest01</servlet-name>
+        <servlet-class>com.kai.Filter.ServletDemo01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filtertest01</servlet-name>
+        <url-pattern>/show</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>filtertest02</servlet-name>
+        <servlet-class>com.kai.Filter.ServletDemo01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filtertest02</servlet-name>
+<!--        有过滤器支持-->
+        <url-pattern>/filter/show</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>characterencodingfilter</filter-name>
+        <filter-class>com.kai.Filter.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>characterencodingfilter</filter-name>
+<!--        只要是/filter下的任何请求,都会经过这个过滤器-->
+        <url-pattern>/filter/*</url-pattern>
+    </filter-mapping>
+
+<!--    注册监听器-->
+    <listener>
+        <listener-class>com.kai.Listener.OnlineCountListener</listener-class>
+    </listener>
+
+    <session-config>
+        <session-timeout>1</session-timeout>
+    </session-config>
+
+<!--    权限拦截-->
+    <servlet>
+        <servlet-name>logintest</servlet-name>
+        <servlet-class>com.kai.Servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logintest</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>logouttest</servlet-name>
+        <servlet-class>com.kai.Servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logouttest</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>filtertest</filter-name>
+        <filter-class>com.kai.Servlet.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filtertest</filter-name>
+        <url-pattern>/page/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+
+    <style>
+        .demo a{
+            float:left;/*向左浮动*/
+            display:block;/*显示块*/
+            height:50px;/*高50*/
+            width:50px;/*宽50*/
+            border-radius:10px;/*半径10*/
+            background:red;/*背景红色*/
+            text-align:center;/*居中对齐*/
+            color:green;/*字体绿色*/
+            text-decoration:none;/*去下划线*/
+            margin-right:5px;/*盒子模型,外边距向右偏移5*/
+            font: bold 20px/50px fon;/*字体样式*/
+        }
+
+        /*属性名=属性值(正则)*/
+        /*存在id属性的元素  a[]{}*/
+        a[id]{   /*a标签中存在id的元素*/
+            background:blue;
+        }
+        a[id="first"]{  /*a标签中存在id为first的元素*/
+            background:black;
+        }
+        a[class*="links"]{
+            background:yellow;
+        }
+
+        /*选择href中以http开头的元素*/
+        a[href^=http]{
+            background:yellowgreen;
+        }
+        /*选择href中以html结尾的元素*/
+        a[href$=html]{
+            background:yellowgreen;
+        }
+    </style>
+</head>
+<body>
+<p class="demo">
+
+    <a href="https://www.baidu.com"
+       class="links item first" id="first">1</a>
+    <a href=""
+       class="links item active" target="_blank" title="test">2</a>
+    <a href="html_3.html"
+       class="links item active">3</a>
+    <a href="html_4.html"
+       class="links item active">4</a>
+    <a href="" id="second">5</a>
+    <a href="">6</a>
+    <a href="">7</a>
+    <a href="">8</a>
+    <a href="https://www.bing.com">9</a>
+    <a href="" id="last">10</a>
+</p>
+</body>
+</html>

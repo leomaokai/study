@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆注册</title>
+</head>
+<body>
+<h3>注册</h3>
+<!--表单 form
+action:表单提交的位置,可以是网站,也可以是请求处理地址
+method:post get 提交方式
+    get:可以在url中看到提交的信息,高效不安全
+    post:usr无法看到信息,安全,可以传输大文件
+input:输入标签
+name:指定表单元素的名称
+value:默认初始值
+maxlength:可输入的最大长度
+size:文本框最大长度
+readonly:只读
+disable:禁用
+hidden:隐藏
+plcceholder:提示信息
+required:非空判断
+pattern:正则表达式
+-->
+<form action="html_7.html" method="post">
+
+<!--    input type="text"  :文本输入框-->
+    <p>名字: <input type="text" name="username"
+                    value="hahahaha" readonly maxlength="8"
+                    size="30" required>
+    </p>
+<!--    input type="password" :密码输入框-->
+    <p>密码: <input type="password" name="password"
+                  placeholder="input passwd" required>
+
+    </p>
+<!--    input type="radio"  :单选框
+        必须value初始值
+        name组一样才能单选-->
+    <p>
+        <input type="radio" value="boy" name="sex" disabled>boy
+        <input type="radio" value="girl" name="sex">girl
+    </p>
+<!--    input type="checkbox"  :多选框
+        与单选框一样,必须value初始值
+        name组一样
+-->
+    <p>
+        <input type="checkbox" value="sleep" name="hobby">sleep
+        <input type="checkbox" value="play" name="hobby" checked>play
+        <input type="checkbox" value="code" name="hobby">code
+    </p>
+
+<!--    按钮
+        input type="button" 普通按钮
+        input type="image"  图片按钮
+        input type="submit" 提交按钮
+        input type="reset"  重置按钮
+-->
+    <p>
+        <input type="button" name="btn1" value="click">
+        <input type="image" src="../resources/image/html_3.jpg" width="300" height="200">
+    </p>
+
+<!--    下拉框,列表框,select
+-->
+    <p>学习:
+        <select name="列表名称">
+            <option value="选项的值">C++</option>
+            <option value="选项的值" selected>Java</option>
+            <option value="选项的值">Python</option>
+            <option value="选项的值">Linux</option>
+
+        </select>
+    </p>
+<!--    文本域 textarea
+-->
+    <p>反馈:
+        <textarea name="textarea" id="10" cols="10" rows="5">
+            input
+
+        </textarea>
+    </p>
+<!--    文件域 input type="file"
+-->
+    <p>
+        <input type="file" name="files">
+        <input type="button" value="上传" name="upload">
+    </p>
+
+<!--    邮件验证-->
+    <p>邮箱:
+        <input type="email" name="email">
+    </p>
+    <!--    URL验证-->
+    <p>url:
+        <input type="url" name="url">
+    </p>
+    <!--    数字验证-->
+    <p>数字:
+        <input type="number" name="num" max="100"
+               min="0" step="10">
+    </p>
+    <!--    滑块-->
+    <p>滑块:
+        <input type="range" name="range"
+               max="100" min="0" step="1">
+    </p>
+    <!--    搜索-->
+    <p>搜索:
+        <input type="search" name="search">
+    </p>
+
+
+<!--    增强鼠标可用性-->
+    <p>
+        <label for="mark">click</label>
+        <input type="text" id="mark">
+    </p>
+
+<!--    pattern正则表达式验证-->
+    <p>自定义邮箱:
+        <input type="text" name="diy mail"
+        pattern="/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/">
+
+    </p>
+
+
+    <p>
+<!--        submit提交按钮-->
+        <input type="submit">
+<!--        reset重置按钮-->
+        <input type="reset">
+    </p>
+
+</form>
+
+
+
+
+
+</body>
+</html>

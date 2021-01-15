@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/spring_01_ioc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_01_ioc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_02_hello/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_02_hello/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_03_ioc2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_03_ioc2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_04_di/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_04_di/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_05_autowired/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_05_autowired/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_06_anno/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_06_anno/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_07_appconfig/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_07_appconfig/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_08_proxy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_08_proxy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_09_aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_09_aop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_10_mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_10_mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_11_transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_11_transaction/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

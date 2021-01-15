@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+
+    <style>
+        /*标签选择器,会选择页面上所有是这个标签的元素*/
+        h1{
+        color:red;
+        }
+        /*类选择器,可以复用类名称,跨标签*/
+        .leo{
+        color:green;
+        }
+        /*id选择器,必须全局唯一*/
+        #mes{
+        color:blue;
+        }
+    </style>
+</head>
+<body>
+<h1>标签选择器</h1>
+<h1 class="leo">类选择器1</h1>
+<h2 class="leo">类选择器2</h2>
+<h2 id="mes">id选择器</h2>
+<h1>标签选择器会选择页面上所有是这个标签的元素</h1>
+<p class="leo" >优先级:id选择器大于类选择器大于标签选择器</p>
+</body>
+</html>

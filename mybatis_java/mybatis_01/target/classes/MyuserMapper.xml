@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--namespace绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.kai.mapper.MyuserMapper">
+
+    <!--    查询语句,id对应方法名字,resultType是返回一个结果(Myuser)-->
+    <select id="getUserList" resultType="User">
+        select * from mybatis.myuser;
+    </select>
+
+<!--    <resultMap id="UserMap" type="User">-->
+<!--&lt;!&ndash;        column是数据库中的字段,property是实体类中的属性&ndash;&gt;-->
+<!--        <result column="id" property="id"/>-->
+<!--        <result column="name" property="name"/>-->
+<!--        <result column="pwd" property="password"/>-->
+<!--    </resultMap>-->
+    <select id="getUserById" parameterType="int" resultType="User">
+        select * from mybatis.myuser where id=#{id};
+    </select>
+
+    <!--对象中的属性可以直接取出来-->
+    <insert id="addUser" parameterType="com.kai.pojo.Myuser">
+        insert into mybatis.myuser(id,name,pwd) values(#{id},#{name},#{pwd});
+    </insert>
+
+    <update id="updateUser" parameterType="com.kai.pojo.Myuser">
+        update mybatis.myuser set name=#{name},pwd=#{pwd} where id=#{id};
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from mybatis.myuser where id =#{id};
+    </delete>
+
+    <select id="getUserListbyLimit" parameterType="map" resultType="User">
+        select * from mybatis.myuser limit #{startIndex},#{pageSize};
+    </select>
+    <select id="getUserByRowBounds" resultType="User" >
+        select * from mybatis.myuser;
+    </select>
+</mapper>
