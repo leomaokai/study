@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //面向对象
+        var Student={
+            name:"student",
+            test:function (){
+                console.log(this.name+" is testing");
+            }
+        }
+        var kai={
+            name:"kai"
+        }
+        //kai的原型是Student
+        kai.__proto__=Student;
+        kai.test();//kai is testing
+        console.log(kai);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

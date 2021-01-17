@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var kai={
+            name:"kai",
+            birth:2010,
+            age:function (){
+                let year = new Date().getFullYear();
+                return year-this.birth;
+            }
+        }
+        //属性
+        kai.name;
+        //方法
+        kai.age();
+
+        function getAge(){
+            let year = new Date().getFullYear();
+            return year-this.birth;
+        }
+        var kai2={
+            name:"kai2",
+            birth:2011,
+            age:getAge
+        }
+        kai2.age();
+
+        getAge.apply(kai,[]);//this指向了kai对象,参数为空
+    </script>
+</head>
+<body>
+
+</body>
+</html>

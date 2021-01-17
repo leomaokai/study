@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作表单</title>
+</head>
+<body>
+<form method="post">
+    <p>
+        <span>用户名:</span>
+        <input type="text" id="username" required>
+    </p>
+    <!--多选框的值就是定义好的value值-->
+    <p>
+        <span>性别:</span>
+        <input type="radio" name="sex" id="boy" value="man">man
+        <input type="radio" name="sex" id="girl" value="woman">woman
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
+<script>
+    let inputID = document.getElementById("username");
+    //得到输入框的值
+    inputID.value;
+    //修改输入框的值
+    inputID.value = "helloWorld";
+    let boyID = document.getElementById("boy");
+    let girlID = document.getElementById("girl");
+    //对于单选框,多选等等value只能去固定的值
+    boyID.value;
+    //checked可以判断是否被选中,如果为true,这被选中
+    boyID.checked;
+    girlID.checked = true;//选中woman
+</script>
+</body>
+</html>

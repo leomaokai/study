@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<!--v-clock解决闪烁问题-->
+<style>
+    [v-clock] {
+        display: none;
+    }
+</style>
+<div id="vue" v-clock>
+    <div>
+        {{info.name}}
+        <p></p>
+        <a v-bind:href="info.url">aa</a>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#vue',
+        data() {
+            return {
+                info: {
+                    name: null,
+                    address: {
+                        stress: null,
+                        city: null,
+                        country: null
+                    },
+                    url: null
+                }
+            }
+        },
+        //钩子函数
+        mounted() {
+            axios.get('../data.json').then(response => (this.info = response.data));
+        }
+    });
+</script>
+</body>
+</html>

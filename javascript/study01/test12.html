@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入DOM节点</title>
+</head>
+<body>
+<p id="js">JavaScript</p>
+<div id="list">
+    <p id="java">Java</p>
+    <p id="cpp">C++</p>
+    <p id="py">Python</p>
+</div>
+<script>
+    let list = document.getElementById("list");
+    let js = document.getElementById("js");
+    list.appendChild(js);//将js节点追加到list子节点
+    //通过js创建一个新的节点
+    let newP = document.createElement("p");//创建一个p标签
+    // newP.setAttribute("id","newp");
+    newP.id="newp";//对p标签赋值id
+    newP.innerText="hello,JS";//赋值文本内容
+    list.appendChild(newP);//追加
+    //创建一个新的标签节点
+    let scriptElement = document.createElement("script");
+    scriptElement.setAttribute("type","text/javascript");
+    list.appendChild(scriptElement);
+
+    // let bodyDom = document.getElementsByTagName("body");
+    // bodyDom[0].style.background="#a11919";
+
+    let cpp = document.getElementById("cpp");
+    list.insertBefore(newP,cpp);
+
+</script>
+</body>
+</html>

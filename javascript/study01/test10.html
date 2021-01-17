@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作DOM节点</title>
+</head>
+<body>
+
+<div id="id1">
+</div>
+<script>
+    let id1 = document.getElementById("id1");
+    id1.innerText="hello";//修改文本的值
+    id1.innerHTML="<strong>world</strong>";//可以解析标签
+    id1.style.color="red";
+    id1.style.fontSize="200px";
+    id1.style.padding="1em";
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提交表单</title>
+    <!--MD5工具类-->
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+<body>
+<form action="https://www.baidu.com/" method="post">
+    <p>
+        <span>用户名:</span>
+        <input type="text" id="username" name="username">
+    </p>
+    <p>
+        <span>密码:</span>
+        <input type="password" id="input-pwd">
+    </p>
+    <p>
+        <input type="hidden" id="md5-pwd">
+    </p>
+    <p>
+        <!--绑定事件-->
+        <button type="submit" onclick="return test()">提交</button>
+    </p>
+</form>
+
+<script>
+    function test() {
+        let userName = document.getElementById("username");
+        let pwd = document.getElementById("input-pwd");
+        let md5pwd = document.getElementById("md5-pwd");
+        // console.log(pwd.value);
+        // //MD5算法
+        // pwd.value=md5(pwd);
+        // console.log(pwd.value);
+        md5pwd.value=md5(pwd.value);
+
+        //true通过提交,false阻止提交
+        return true;
+    }
+</script>
+</body>
+</html>
