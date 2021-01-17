@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--自定义组件 v-for遍历数组,v-bind绑定参数-->
+    <kai v-for="i in items" v-bind:item="i"></kai>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script>
+    //component组件
+    Vue.component("kai", {
+        props: ['item'],//接收参数
+        template: '<li>{{item}}</li>'
+    });
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            items: ["java", "Linxu", "cpp"]
+        },
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var abs=function (x){
+            for(let i=0;i<arguments.length;i++){
+                console.log(arguments[i]);
+            }
+            if(x>=0){
+                return x;
+            }else{
+                return -x;
+            }
+        }
+
+        function test01(a,b){
+            console.log("a==>"+a);
+            console.log("b==>"+b);
+            if(arguments.length>2){
+                for(let i=2;i<arguments.length;i++){
+                    console.log(arguments[i]);
+                }
+            }
+        }
+        function test02(a,b,...rest){
+            console.log("a==>"+a);
+            console.log("b==>"+b);
+            console.log(rest);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

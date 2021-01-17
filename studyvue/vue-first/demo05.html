@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    输入的文本:<input type="text" v-model="message">{{message}}
+    <p></p>
+    输入的文本:<textarea v-model="message"></textarea>{{message}}
+</div>
+<p></p>
+<div id="app2">
+    单选:
+    <input type="radio" name="sex" v-model="message" value="man"> man
+    <input type="radio" name="sex" v-model="message" value="woman"> woman
+    <p>
+        选了:{{message}}
+    </p>
+</div>
+<div id="app3">
+    下拉框:
+    <select v-model="message">
+        <option value="">--请选择--</option>
+        <option>Java</option>
+        <option>C++</option>
+        <option>Python</option>
+    </select>
+    <p>
+        选了:{{message}}
+    </p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data:{
+            message:""
+        }
+    });
+    let vm2 = new Vue({
+        el: '#app2',
+        data:{
+            message: ""
+        }
+    });
+    let vm3 = new Vue({
+        el:"#app3",
+        data:{
+            message:""
+        }
+    });
+</script>
+</body>
+</html>

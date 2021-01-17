@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+<body>
+
+<!--获取鼠标当前的坐标-->
+mouse:<span id="move"></span>
+<div id="divMove">
+    移动鼠标
+</div>
+<style>
+    #divMove{
+        width:500px;
+        height: 500px;
+        border:1px solid red;
+    }
+</style>
+<script>
+    //当网页元素加载完毕之后,响应事件
+    $(function (){
+        $('#divMove').mousemove(function (e){
+            $('#move').text('x:'+e.pageX+' '+'y:'+e.pageY);
+        })
+    })
+</script>
+</body>
+</html>

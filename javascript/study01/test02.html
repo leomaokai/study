@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //变量的作用域
+        function test01(){
+            var x=1;
+            x+=1;
+            console.log(x);
+        }
+        //会报错,x未定义
+        // x+=1;
+        // console.log(x);
+        function test02(){
+            var x=1;
+            function test03(){
+                var x='A';
+                console.log(x);
+            }
+            test03();
+            console.log(x);
+        }
+
+        function test04(){
+            var x='x + '+y;
+            console.log(x);
+            var y='y';
+        }
+        var x="window";
+        function test05(){
+            console.log(x);
+        }
+        // alert(x);
+        // alert(window.x);
+        // var x="test";
+        // window.alert(x);
+        // var y=window.alert;
+        // y(x);
+        // window.alert=function (){
+        //
+        // }
+        // alert(555);
+        // window.alert=y;
+        // alert(123);
+
+        //唯一全局变量
+        var Kai={};
+        //定义全局变量
+        Kai.name="kai";
+        Kai.test01=function(a,b){
+            return a+b;
+        }
+
+        Kai.test01(5,6);
+
+        function test06(){
+            for (let i = 0; i < 100; i++) {
+                console.log(i);
+            }
+            // console.log(i+1);
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作DOM</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+<body>
+<ul id="test">
+    <li class="java">Java</li>
+    <li name="cpp">C++</li>
+</ul>
+<script>
+    $('#test li[name=cpp]').text('python');//设置值
+    $('#test li[class=java]').text()//获得值
+    $('#test li[class=java]').html()//获得值
+    $('#test li[class=java]').html('<strong>123</strong>')//设置值
+    $('#test li[name=cpp]').css({"color":"red"})//修改css
+    $('#test li[name=cpp]').show()//显示
+    $('#test li[name=cpp]').hide()//隐藏
+</script>
+</body>
+</html>
