@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kai.demo.mapper.UserMapper">
+
+    <!--    查询语句,id对应方法名字,resultType是返回一个结果(Myuser)-->
+    <select id="listUsers" resultType="MyUser">
+        select * from mybatis.myuser;
+    </select>
+    <select id="getUser" parameterType="int" resultType="MyUser">
+        select * from mybatis.myuser where id=#{id};
+    </select>
+
+    <!--对象中的属性可以直接取出来-->
+    <insert id="addUser" parameterType="MyUser">
+        insert into mybatis.myuser(id,name,pwd) values(#{id},#{name},#{pwd});
+    </insert>
+
+    <update id="updateUser" parameterType="MyUser">
+        update mybatis.myuser set name=#{name},pwd=#{pwd} where id=#{id};
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from mybatis.myuser where id =#{id};
+    </delete>
+    
+</mapper>

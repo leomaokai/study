@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>test</h1>
+<!--所有的html元素都可以被thymeleaf替换接管 th:元素名-->
+<div th:text="${msg1}"></div>
+<div th:utext="${msg2}"></div>
+<hr>
+<div th:each="user:${users}" th:text="${user}"></div>
+<div th:each="user:${users}">[[${user}]]</div>
+</body>
+</html>

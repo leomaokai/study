@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.AnonymousMister:druid-spring-boot-starter:1.1.18_dynamic">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/AnonymousMister/druid-spring-boot-starter/1.1.18_dynamic/druid-spring-boot-starter-1.1.18_dynamic.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/AnonymousMister/druid-spring-boot-starter/1.1.18_dynamic/druid-spring-boot-starter-1.1.18_dynamic-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/AnonymousMister/druid-spring-boot-starter/1.1.18_dynamic/druid-spring-boot-starter-1.1.18_dynamic-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
